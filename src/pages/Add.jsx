@@ -80,7 +80,9 @@ export default function AddEditPage({}) {
           const updatedData = [...storedData, newEmployee];
           localStorage.setItem("employees", JSON.stringify(updatedData));
         }
-
+        toast.success("Data updated successfully", {
+          id: toastId,
+        });
         navigate("/list", { replace: true });
       }, 2000);
     } catch (error) {
