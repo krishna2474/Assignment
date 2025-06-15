@@ -1,9 +1,13 @@
 import { Route, Routes, useLocation } from "react-router-dom";
+import {useEffect} from "react";
 import SigninPage from "./pages/SigninPage";
 import ListPage from "./pages/ListPage";
 import Add from "./pages/Add";
 
 const App = () => {
+useEffect(()=>{
+alert("Please use username: admin, and password: admin123")
+},[])
   const location = useLocation();
 
   return (
